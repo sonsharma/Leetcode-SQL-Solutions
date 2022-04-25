@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/all-valid-triplets-that-can-represent-a-country/
+-- https://leetcode.com/problems/all-valid-triplets-that-can-represent-a-country/
 
 SELECT
     a.student_name as member_A,

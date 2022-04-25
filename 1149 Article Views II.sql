@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/article-views-ii/submissions/
+-- https://leetcode.com/problems/article-views-ii/submissions/
 
 SELECT
     DISTINCT viewer_id as id 

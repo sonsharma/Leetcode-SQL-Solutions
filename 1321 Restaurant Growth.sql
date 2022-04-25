@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/restaurant-growth/
+-- https://leetcode.com/problems/restaurant-growth/
 
 WITH CTE AS (SELECT
         visited_on, 
@@ -13,7 +13,7 @@ GROUP BY visited_on
 ORDER BY visited_on
 
 
-# Another
+-- Another solution
 SELECT 
     visited_on,
     MIN(amount) as amount,

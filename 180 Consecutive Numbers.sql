@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/consecutive-numbers/
+-- https://leetcode.com/problems/consecutive-numbers/
 
 SELECT DISTINCT ConsecutiveNums FROM
 (SELECT
@@ -8,7 +8,7 @@ SELECT DISTINCT ConsecutiveNums FROM
 FROM Logs)m
 WHERE ConsecutiveNums is not NULL;
 
-# Another solution
+-- Another solution
 -- Find previous and next record - check its the same as current, if same then 1 else 0
 -- sum({1}})
 -- filter where {2} = 2
@@ -22,7 +22,7 @@ FROM (SELECT
     FROM Logs) l
 WHERE PrevNum + NextNum = 2
 
-# Another solution 
+-- Another solution 
 SELECT DISTINCT
     l1.Num AS ConsecutiveNums
 FROM

@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/
+-- https://leetcode.com/problems/friend-requests-ii-who-has-the-most-friends/
 
 SELECT
     r1.requester_id as id, COUNT(DISTINCT r1.accepter_id)+ COUNT(DISTINCT r2.requester_id)  as num
@@ -8,7 +8,7 @@ GROUP BY r1.requester_id
 ORDER BY 2 desc
 LIMIT 1
 
-# Another solution
+-- Another solution
 SELECT
     id,
     COUNT(*) num

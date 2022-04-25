@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/apples-oranges/
+-- https://leetcode.com/problems/apples-oranges/
 
 -- for each date - find sales for sum(apple) - sum(orange)
 -- order by sale_date ('YYYY-MM-DD')

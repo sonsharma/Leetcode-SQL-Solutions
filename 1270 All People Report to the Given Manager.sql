@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/all-people-report-to-the-given-manager/
+-- https://leetcode.com/problems/all-people-report-to-the-given-manager/
 
 WITH RECURSIVE CTE AS (
     SELECT employee_id, 1 as elevel
@@ -15,3 +15,23 @@ SELECT employee_id
 FROM CTE
 WHERE elevel<=3
 ;
+
+-- Another solution
+WITH direct_report AS (SELECT
+        employee_id
+    FROM Employees
+    WHERE (employee_id <> manager_id AND manager_id = 1)),
+
+2_direct_report AS (SELECT
+    employee_id
+FROM employees
+WHERE manager_id IN (SELECT employee_id FROM direct_report))
+
+SELECT employee_id FROM direct_report
+UNION
+SELECT employee_id FROM 2_direct_report
+UNION
+(SELECT
+    employee_id
+FROM employees
+WHERE manager_id IN (SELECT employee_id FROM 2_direct_report))

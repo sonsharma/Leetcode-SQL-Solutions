@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/average-selling-price/
+-- https://leetcode.com/problems/average-selling-price/
 	
 SELECT
     p.product_id, round(sum(p.price*u.units)/sum(units),2) as average_price

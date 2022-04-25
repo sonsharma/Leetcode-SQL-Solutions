@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/rank-scores/
+-- https://leetcode.com/problems/rank-scores/
 
 SELECT 
     s1.score,
@@ -8,7 +8,7 @@ FROM
 GROUP BY s1.id
 ORDER BY 2
 
-#Another solution
+-- Another solution
 
  SELECT
     score,
@@ -16,7 +16,7 @@ ORDER BY 2
 FROM Scores
 ORDER BY 2;
 
-# Another solution
+-- Another solution
 SELECT
   Score,
   (SELECT count(*) FROM (SELECT distinct Score s FROM Scores) tmp WHERE s >= Score) Rank

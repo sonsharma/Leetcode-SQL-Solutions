@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/reformat-department-table/
+-- https://leetcode.com/problems/reformat-department-table/
 SELECT     id,
         max(Jan_Revenue) as Jan_Revenue,
         max(Feb_Revenue) as Feb_Revenue,      
@@ -31,7 +31,7 @@ FROM
 ORDER BY id)f
 GROUP by id
 
-# Another solution
+-- Another solution
 SELECT 
     id,
     SUM(IF(month ='Jan', revenue, null)) as Jan_Revenue,

@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/the-most-frequently-ordered-products-for-each-customer/
+-- https://leetcode.com/problems/the-most-frequently-ordered-products-for-each-customer/
 
 -- for each customer, product, -> rank (how many times a product has been ordered - count each distinct date)
 -- filter out rows with rank 1
@@ -21,7 +21,7 @@ SELECT
 FROM CTE c LEFT JOIN Products p USING(product_id)
 WHERE prod_rank = 1
 
-# Another solution - Better
+-- Another solution - Better
 WITH CTE AS (SELECT
     customer_id,
     product_id,

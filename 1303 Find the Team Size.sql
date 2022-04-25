@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/find-the-team-size/
+-- https://leetcode.com/problems/find-the-team-size/
 
 -- HOW MANY TEAM ARE THERE - SIZE of that team
 -- for each employee - check their team id - find size from (1)
@@ -15,8 +15,9 @@ FROM Employee e LEFT JOIN CTE c USING(team_id)
 GROUP BY e.employee_id
 ;
 
-#Another solution - using window function
+-- Another solution - using window function
 SELECT
     employee_id,
     COUNT(*) OVER (Partition by team_id) as team_size
 FROM Employee
+;

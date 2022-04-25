@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/sales-analysis-i/
+-- https://leetcode.com/problems/sales-analysis-i/
 
 SELECT seller_id
 FROM (SELECT

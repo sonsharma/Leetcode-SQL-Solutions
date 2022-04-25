@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/friendly-movies-streamed-last-month/
+-- https://leetcode.com/problems/friendly-movies-streamed-last-month/
 
 SELECT
     DISTINCT title

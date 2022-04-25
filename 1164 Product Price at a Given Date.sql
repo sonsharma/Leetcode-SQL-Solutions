@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/product-price-at-a-given-date/
+-- https://leetcode.com/problems/product-price-at-a-given-date/
 
 select distinct product_id, 10 as price
 from Products

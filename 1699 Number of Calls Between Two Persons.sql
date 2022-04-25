@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/number-of-calls-between-two-persons/
+-- https://leetcode.com/problems/number-of-calls-between-two-persons/
 
 WITH CTE AS (SELECT 
                  from_id as person1,
@@ -20,7 +20,7 @@ SELECT
 FROM CTE
 GROUP BY person1, person2
 
-#Another solution
+-- Another solution
 
 WITH CTE AS (SELECT * FROM Calls
 UNION ALL
