@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/report-contiguous-dates/
+-- https://leetcode.com/problems/report-contiguous-dates/
 
 -- (row_number-fail_date) - use it to find group of continuous dates - group it
 -- repeat same for success table as well
@@ -32,7 +32,7 @@ GROUP BY SUBDATE(success_date, INTERVAL row_num day)
 ORDER BY start_date
 
 
-#Another solution
+-- Another solution
 WITH x AS (
     SELECT 'failed' AS period_state, fail_date AS date_x, ROW_NUMBER() OVER(ORDER BY fail_date) AS r FROM Failed
     UNION
@@ -48,7 +48,7 @@ GROUP BY 1, DATE_ADD(date_x, INTERVAL -r DAY)
 ORDER BY 2
 
 
-#Another solution
+-- Another solution
 -- success - for a date -> lower date is not present - start_date
     --             higher_date not present - end date
 -- repeat it for failed

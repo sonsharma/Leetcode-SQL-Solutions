@@ -1,4 +1,5 @@
-# https://leetcode.com/problems/immediate-food-delivery-ii/
+-- https://leetcode.com/problems/immediate-food-delivery-ii/
+
 WITH CTE AS (Select order_date, 
              customer_pref_delivery_date,
              rank() OVER (Partition by customer_id ORDER BY order_date) as date_rank

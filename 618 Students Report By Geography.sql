@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/students-report-by-geography/
+-- https://leetcode.com/problems/students-report-by-geography/
 
 SELECT 
     MIN(CASE WHEN Continent = 'America' THEN Name END) AS America,
@@ -10,7 +10,7 @@ FROM (SELECT
 FROM Student) s
 GROUP BY stu_rank
 
-# Another solution
+-- Another solution
 WITH CTE AS (SELECT
         CASE WHEN continent = 'America' then @r1:=@r1+1
             WHEN continent = 'Asia' then @r2 := @r2 +1

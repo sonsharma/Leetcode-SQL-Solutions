@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/average-salary-departments-vs-company/
+-- https://leetcode.com/problems/average-salary-departments-vs-company/
 
 
 WITH CTE AS (SELECT s.*, e.department_id
@@ -20,7 +20,7 @@ SELECT
 FROM CTE2
 GROUP BY pay_month, department_id
 
-# Another solution (concise)
+-- Another solution (concise)
 
 -- Get department id information in salary table
 -- find avg(salary) for each 'year-month', department 

@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/find-followers-count/
+-- https://leetcode.com/problems/find-followers-count/
 
 SELECT USER_ID, COUNT(*) AS followers_count
 FROM Followers

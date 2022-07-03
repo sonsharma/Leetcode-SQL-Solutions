@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/sales-by-day-of-the-week/
+-- https://leetcode.com/problems/sales-by-day-of-the-week/
 
 SELECT
     item_category as category,
@@ -9,12 +9,11 @@ SELECT
     sum(if(dayname(o.order_date)='Friday', quantity, 0)) as Friday,
     sum(if(dayname(o.order_date)='Saturday', quantity, 0)) as Saturday,
     sum(if(dayname(o.order_date)='Sunday', quantity, 0)) as Sunday
-
 FROM Items i LEFT JOIN Orders o USING(item_id)
 GROUP BY item_category
 ORDER BY item_category
 
-#Another similar solution
+-- Another similar solution
 -- JOIN Order with Items -> item_id
 -- segregate order_date on basis of day of week -> get sum(qty)
 -- group by item_cate

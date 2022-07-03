@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/trips-and-users/
+-- https://leetcode.com/problems/trips-and-users/
 
 SELECT 
     Request_at as Day, 
@@ -9,7 +9,7 @@ WHERE t.client_id not in (SELECT Users_id FROM Users where Banned = 'YES')
 	and Request_at between '2013-10-01' and '2013-10-03'
 GROUP BY Request_at
 
-# Another solution
+-- Another solution
 SELECT
     Request_at Day,
     ROUND(SUM(CASE WHEN u.Banned != 'Yes' and Status != 'completed' THEN 1 else 0 END)/SUM(CASE WHEN u.Banned != 'Yes' THEN 1 ELSE 0 END), 2) 'Cancellation Rate'
